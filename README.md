@@ -1,2 +1,2 @@
 # notification
-This repository is a service that's responsable send notifications
+This repository is a service that's responsable for send notifications
