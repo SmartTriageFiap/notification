@@ -7,17 +7,29 @@ import (
 const (
 	KafkaAddr  = "KAFKA_ADDRS"
 	KafkaTopic = "KAFKA_TOPIC"
+	MongoUser  = "MONGO_USER"
+	MongoPass  = "MONGO_PASS"
+	MongoAddr  = "MONGO_ADDR"
+	MongoPort  = "MONGO_PORT"
 )
 
-func Configuration() error {
+func Initialize() error {
 	config := &envconfig.Configuration{
 		Envs: []string{
 			KafkaAddr,
 			KafkaTopic,
+			MongoUser,
+			MongoPass,
+			MongoAddr,
+			MongoPort,
 		},
 		Required: []string{
 			KafkaAddr,
 			KafkaTopic,
+			MongoUser,
+			MongoPass,
+			MongoAddr,
+			MongoPort,
 		},
 	}
 
